@@ -1,5 +1,5 @@
 import Danger
-import CompatabilityDetection // package: ./CompatabilityDetection
+import CompatabilityDetection // package: https://github.com/vknabel/CompatabilityDetection
 
 let mayHaveAddedProjects = danger.github.modifiedFiles.contains("README.md")
 
@@ -12,6 +12,6 @@ if (mayHaveAddedProjects) {
         #else
         let osName = "macOS"
         #endif
-        warn("\(repo.name) seems to be incompatible with \(osName): \(error)")
+        fail("\(repo.name) seems to be incompatible with \(osName): \(error)")
     }
 }
