@@ -11,6 +11,7 @@ install:
 - swiftenv install 4.0
 - swiftenv global 4.0 # https://github.com/danger/danger-swift/issues/63
 - git clone https://github.com/danger/danger-swift.git
+- sudo ln -s $(which swift) /usr/bin/swift
 - cd danger-swift && sudo make install
 script:
 - danger process danger-swift
