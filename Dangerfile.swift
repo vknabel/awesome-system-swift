@@ -1,7 +1,5 @@
 import Danger
-
-warn("Does this work?")
-/**import CompatabilityDetection // package: ./CompatabilityDetection
+import CompatabilityDetection // package: ./CompatabilityDetection
 
 let mayHaveAddedProjects = danger.github.modifiedFiles.contains("README.md")
 
@@ -17,4 +15,3 @@ if (mayHaveAddedProjects) {
         warn("\(repo.name) seems to be incompatible with \(osName): \(error)")
     }
 }
-*/
