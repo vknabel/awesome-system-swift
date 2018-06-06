@@ -1,4 +1,4 @@
-import CompatabilityDetection // marathon:https://github.com/vknabel/CompatabilityDetection.git
+import CompatabilityDetection // package: https://github.com/vknabel/CompatabilityDetection.git
 import Danger
 
 let mayHaveAddedProjects = danger.github.modifiedFiles.contains("README.md")
