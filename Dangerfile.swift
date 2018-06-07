@@ -2,10 +2,10 @@ import CompatabilityDetection // package: https://github.com/vknabel/Compatabili
 import Danger
 
 let danger = Danger()
-let mayHaveAddedProjects = danger.github.modifiedFiles.contains("README.md")
+let mayHaveAddedProjects = danger.git.modifiedFiles.contains("README.md")
 
 if (mayHaveAddedProjects) {
-    let diffUrl = "https://github.com/\(danger.github.pullRequest.fullName)/pull/\(danger.github.pullRequest.number)"
+    let diffUrl = "https://github.com/\(danger.github.pullRequest.base.repo.fullName)/pull/\(danger.github.pullRequest.number)"
     let results = compatabilityTestAdditionsForUrl(diffUrl) ?? []
     for (repo, error) in results {
         #if os(Linux)
