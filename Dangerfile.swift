@@ -1,6 +1,7 @@
 import CompatabilityDetection // package: https://github.com/vknabel/CompatabilityDetection.git
 import Danger
 
+let danger = Danger()
 let mayHaveAddedProjects = danger.github.modifiedFiles.contains("README.md")
 
 if (mayHaveAddedProjects) {
